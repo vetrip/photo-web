@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="jumbotron">Please welcome to vetri's photo blog. The
+		place where you can see all his work so far.</div>
+
+	<accordion close-others="true" >
+		<accordion-group heading="{{album.name}}" ng-repeat="album in albums" ng-click="getPhotos({{album.id}})">
+			<span >{{album.desc}}</span>
+			
+			<div ng-repeat="photo in photos">
+				<span>{{photo.name}}</span>
+			</div>
+		</accordion-group>
+	</accordion>
+
+	
+</div>
